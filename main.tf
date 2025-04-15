@@ -54,8 +54,8 @@ resource "xenorchestra_vm" "vm" {
       type     = "ssh"
       host     = self.network[0].ipv4_addresses[0]
       user     = var.vm_user
-      password = var.vm_password
-    }
+    private_key = file("${var.private_key_path}")
+  }
 
     inline = [
       "echo 'Waiting for cloud-init to complete...'",

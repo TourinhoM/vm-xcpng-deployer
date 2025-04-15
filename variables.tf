@@ -77,3 +77,7 @@ variable "vm_os_template" {
   description = "Tipo do sistema operacional (ubuntu|debian)"
   type        = string
 }
+variable "private_key_path" {
+  description = "Caminho absoluto da sua private key (ex: ~/.ssh/id_rsa)"
+  type        = string
+}
