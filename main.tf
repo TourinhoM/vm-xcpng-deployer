@@ -19,7 +19,6 @@ resource "xenorchestra_cloud_config" "vm" {
   name = "cloud config name"
   template = templatefile("${path.module}/cloud-init/${var.vm_os_template}.tpl", {
   vm_user     = var.vm_user
-  vm_password = var.vm_password
   vm_name     = var.vm_name
   public_key  = var.public_key
 })
